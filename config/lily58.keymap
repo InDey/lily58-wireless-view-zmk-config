@@ -11,7 +11,29 @@
 #include <dt-bindings/zmk/rgb.h>
 
 / {
-    combos { compatible = "zmk,combos"; };
+    combos {
+        compatible = "zmk,combos";
+
+        PowerToys_mouse_jump {
+            bindings = <&kp LG(LS(J))>;
+            key-positions = <40 39>;
+        };
+
+        stop_build {
+            bindings = <&kp LS(LA(LC(S)))>;
+            key-positions = <41 40>;
+        };
+
+        attachProc {
+            bindings = <&kp LA(LC(P))>;
+            key-positions = <5 0>;
+        };
+
+        reattachProc {
+            bindings = <&kp LS(LA(P))>;
+            key-positions = <4 0>;
+        };
+    };
 
     macros {
         start_hex: start_hex {
@@ -112,14 +134,12 @@
 
             display-name = "Base";
             bindings = <
-&kp ESC     &kp N1  &kp N2          &kp N3            &kp N4       &kp N5                                  &kp N6     &kp N7       &kp N8            &kp N9           &kp N0    &kp GRAVE
-&kp TAB     &kp Q   &kp W           &kp E             &kp R        &kp T                                   &kp Y      &kp U        &kp I             &kp O            &kp P     &kp MINUS
-&mo 1       &kp A   &mt LEFT_ALT S  &mt LEFT_SHIFT D  &mt LCTRL F  &kp G                                   &kp H      &mt RCTRL J  &mt LEFT_SHIFT K  &mt RIGHT_ALT L  &kp SEMI  &lt 1 SQT
-&caps_word  &kp Z   &kp X           &kp C             &kp V        &kp B      &kp ENTER     &kp RET        &kp N      &kp M        &kp COMMA         &kp DOT          &kp FSLH  &kp RSHFT
-                                    &lt 3 LEFT_WIN    &mo 2        &kp SPACE  &kp DELETE    &kp BACKSPACE  &kp SPACE  &mo 2        &lt 3 RIGHT_WIN
+&kp ESC     &kp N1  &kp N2          &kp N3            &kp N4       &kp N5                                    &kp N6     &kp N7        &kp N8            &kp N9           &kp N0           &kp GRAVE
+&kp TAB     &kp Q   &kp W           &kp E             &kp R        &kp T                                     &kp Y      &kp U         &kp I             &kp O            &kp P            &kp BACKSLASH
+&mo 1       &kp A   &mt LEFT_ALT S  &mt LEFT_SHIFT D  &mt LCTRL F  &kp G                                     &kp H      &mt RCTRL J   &mt LEFT_SHIFT K  &mt RIGHT_ALT L  &lt 1 SEMICOLON  &lt 3 SQT
+&caps_word  &kp Z   &kp X           &kp C             &kp V        &kp B        &kp EQUAL     &kp RET        &kp N      &kp M         &kp COMMA         &kp DOT          &lt 2 SLASH      &kp RIGHT_WIN
+                                    &kp LEFT_WIN      &kp DELETE   &lt 2 SPACE  &kp DELETE    &kp BACKSPACE  &kp SPACE  &kp NUMBER_0  &kp EQUAL
             >;
-
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
         symbols {
@@ -130,16 +150,14 @@
             // |       |     |     |      |      |      |        |  |       |      |  _    |  +    |  {   |   }   |  "|"  |
             //                     |      |      |      |        |  |       |      |       |       |
 
-            display-name = "sym";
+            display-name = "syms";
             bindings = <
-&trans          &kp F1         &kp F2         &kp F3        &kp F4        &kp F5                             &kp F6         &kp F7  &kp F8   &kp F9  &kp F10    &start_hex
-&trans          &kp LS(DLLR)   &kp LS(AT)     &kp LS(LBRC)  &kp LS(RBRC)  &kp LS(AMPS)                       &kp LS(PRCNT)  &kp N7  &kp N8   &kp N9  &kp STAR   &kp FSLH
-&trans          &kp LS(LT)     &kp LS(GT)     &kp LS(LPAR)  &kp LS(RPAR)  &kp LS(UNDER)                      &kp LS(EXCL)   &kp N4  &kp N5   &kp N6  &kp MINUS  &kp LS(DQT)
-&kp LEFT_SHIFT  &kp LS(CARET)  &kp LS(POUND)  &kp LBKT      &kp RBKT      &kp LS(PIPE)   &kp F11    &kp F12  &kp LS(QMARK)  &kp N1  &kp N2   &kp N3  &kp PLUS   &kp ENTER
-                                              &kp PERIOD    &kp COMMA     &kp SEMI       &trans     &trans   &kp EQUAL      &kp N0  &kp DOT
+&kp F12       &kp F1         &kp F2         &kp F3        &kp F4        &kp F5                           &kp F6         &kp F7  &kp F8   &kp F9  &kp F10    &kp F11
+&trans        &kp LS(DLLR)   &kp LS(AT)     &kp LS(LBRC)  &kp LS(RBRC)  &kp LS(AMPS)                     &kp LS(PRCNT)  &kp N7  &kp N8   &kp N9  &kp STAR   &kp FSLH
+&kp CAPSLOCK  &kp LS(LT)     &kp LS(GT)     &kp LS(LPAR)  &kp LS(RPAR)  &kp LS(UNDER)                    &kp LS(EXCL)   &kp N4  &kp N5   &kp N6  &kp MINUS  &kp LS(DQT)
+&trans        &kp LS(CARET)  &kp LS(POUND)  &kp LBKT      &kp RBKT      &kp LS(PIPE)   &trans    &trans  &kp LS(QMARK)  &kp N1  &kp N2   &kp N3  &kp PLUS   &kp EQUAL
+                                            &trans        &trans        &trans         &trans    &trans  &trans         &kp N0  &kp DOT
             >;
-
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
         Controls {
@@ -152,11 +170,11 @@
 
             display-name = "ctrls";
             bindings = <
-&trans          &format_document  &uncomment  &comment     &show_file  &toggle_header_code_files                    &kp INS   &kp KP_NUMLOCK         &none       &none               &none    &none
-&trans          &kp N1            &kp N2      &kp N3       &kp N4      &kp LC(F9)                                   &none     &kp LA(LS(COMMA))      &kp UP      &kp LS(LA(PERIOD))  &none    &none
-&kp LALT        &kp LGUI          &kp LALT    &kp LSHFT    &kp LCTRL   &kp F11                                      &kp HOME  &kp LEFT               &kp DOWN    &kp RIGHT           &kp END  &kp TAB
-&kp LEFT_SHIFT  &none             &none       &join_lines  &none       &kp LS(F11)                &trans    &trans  &none     &kp LC(RIGHT_BRACKET)  &kp K_BACK  &kp K_FORWARD       &none    &none
-                                              &trans       &trans      &trans                     &trans    &trans  &trans    &trans                 &trans
+&trans          &format_document  &uncomment      &comment     &show_file  &toggle_header_code_files                    &kp INS   &kp KP_NUMLOCK         &none       &previous_bookmark  &toggle_bookmark  &next_bookmark
+&trans          &none             &none           &none        &none       &kp LC(F9)                                   &none     &kp LA(LS(COMMA))      &kp UP      &kp LS(LA(PERIOD))  &none             &none
+&kp LALT        &kp LGUI          &kp LALT        &kp LSHFT    &kp LCTRL   &kp F11                                      &kp HOME  &kp LEFT               &kp DOWN    &kp RIGHT           &kp END           &kp TAB
+&kp LEFT_SHIFT  &none             &kp LC(PERIOD)  &join_lines  &none       &kp LS(F11)                &trans    &trans  &none     &kp LC(RIGHT_BRACKET)  &kp K_BACK  &kp K_FORWARD       &none             &none
+                                                  &trans       &trans      &trans                     &trans    &trans  &trans    &trans                 &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -165,9 +183,9 @@
         Profiles {
             display-name = "Profiles";
             bindings = <
-&bt BT_CLR       &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                              &none  &none  &none   &none  &none  &none
+&bt BT_CLR       &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                              &none  &none  &none   &none  &none  &bootloader
 &bl BL_TOG       &bl BL_DEC       &bl BL_INC       &none         &none         &none                                     &none  &none  &none   &none  &none  &none
-&rgb_ug RGB_TOG  &rgb_ug RGB_EFR  &rgb_ug RGB_EFF  &none         &none         &none                                     &none  &none  &none   &none  &none  &none
+&rgb_ug RGB_TOG  &rgb_ug RGB_EFR  &rgb_ug RGB_EFF  &none         &none         &none                                     &none  &none  &none   &none  &none  &trans
 &soft_off        &none            &none            &none         &none         &none         &bootloader    &bootloader  &none  &none  &none   &none  &none  &none
                                                    &trans        &none         &none         &none          &none        &none  &none  &trans
             >;
