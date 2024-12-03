@@ -11,33 +11,9 @@
 #include <dt-bindings/zmk/rgb.h>
 
 / {
-    combos {
-        compatible = "zmk,combos";
-
-        enter_bootloader_right {
-            bindings = <&bootloader>;
-            key-positions = <11 43 57>;
-        };
-
-        enter_bootloader_left {
-            bindings = <&bootloader>;
-            key-positions = <42 0 50>;
-        };
-
-        toggle_backlight {
-            bindings = <&bl BL_TOG>;
-            key-positions = <41 5>;
-        };
-    };
+    combos { compatible = "zmk,combos"; };
 
     macros {
-        Build_All: Build_All {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(LS(B))>;
-            label = "BUILD_ALL";
-        };
-
         start_hex: start_hex {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -50,13 +26,6 @@
             #binding-cells = <0>;
             bindings = <&kp PRINTSCREEN>;
             label = "GREEN_SHOT";
-        };
-
-        jump_to_paired_bracket: jump_to_paired_bracket {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(RIGHT_BRACKET)>;
-            label = "JUMP_TO_PAIRED_BRACKET";
         };
 
         format_document: format_document {
@@ -143,17 +112,17 @@
 
             display-name = "Base";
             bindings = <
-&kp ESC     &kp N1  &kp N2          &kp N3            &kp N4       &kp N5                          &kp N6         &kp N7       &kp N8            &kp N9           &kp N0    &kp GRAVE
-&kp TAB     &kp Q   &kp W           &kp E             &kp R        &kp T                           &kp Y          &kp U        &kp I             &kp O            &kp P     &kp MINUS
-&mo 1       &kp A   &mt LEFT_ALT S  &mt LEFT_SHIFT D  &mt LCTRL F  &kp G                           &kp H          &mt RCTRL J  &mt LEFT_SHIFT K  &mt RIGHT_ALT L  &kp SEMI  &lt 1 SQT
-&caps_word  &kp Z   &kp X           &kp C             &kp V        &kp B   &kp ENTER    &kp RET    &kp N          &kp M        &kp COMMA         &kp DOT          &kp FSLH  &kp RSHFT
-                                    &lt 3 LEFT_WIN    &kp DEL      &mo 2   &kp SPACE    &kp SPACE  &kp BACKSPACE  &mo 2        &mo 3
+&kp ESC     &kp N1  &kp N2          &kp N3            &kp N4       &kp N5                                  &kp N6     &kp N7       &kp N8            &kp N9           &kp N0    &kp GRAVE
+&kp TAB     &kp Q   &kp W           &kp E             &kp R        &kp T                                   &kp Y      &kp U        &kp I             &kp O            &kp P     &kp MINUS
+&mo 1       &kp A   &mt LEFT_ALT S  &mt LEFT_SHIFT D  &mt LCTRL F  &kp G                                   &kp H      &mt RCTRL J  &mt LEFT_SHIFT K  &mt RIGHT_ALT L  &kp SEMI  &lt 1 SQT
+&caps_word  &kp Z   &kp X           &kp C             &kp V        &kp B      &kp ENTER     &kp RET        &kp N      &kp M        &kp COMMA         &kp DOT          &kp FSLH  &kp RSHFT
+                                    &lt 3 LEFT_WIN    &mo 2        &kp SPACE  &kp DELETE    &kp BACKSPACE  &kp SPACE  &mo 2        &lt 3 RIGHT_WIN
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
-        lower_layer {
+        symbols {
             // ------------------------------------------------------------------------------------------------------------
             // | BTCLR | BT1 | BT2 |  BT3 |  BT4 |  BT5 |                   |      |       |       |      |       |       |
             // |  F1   |  F2 |  F3 |  F4  |  F5  |  F6  |                   |  F7  |  F8   |  F9   |  F10 |  F11  |  F12  |
@@ -161,19 +130,19 @@
             // |       |     |     |      |      |      |        |  |       |      |  _    |  +    |  {   |   }   |  "|"  |
             //                     |      |      |      |        |  |       |      |       |       |
 
-            display-name = "Symbols";
+            display-name = "sym";
             bindings = <
 &trans          &kp F1         &kp F2         &kp F3        &kp F4        &kp F5                             &kp F6         &kp F7  &kp F8   &kp F9  &kp F10    &kp N0
 &trans          &kp LS(DLLR)   &kp LS(AT)     &kp LS(LBRC)  &kp LS(RBRC)  &kp LS(AMPS)                       &kp LS(PRCNT)  &kp N7  &kp N8   &kp N9  &kp STAR   &kp FSLH
 &trans          &kp LS(LT)     &kp LS(GT)     &kp LS(LPAR)  &kp LS(RPAR)  &kp LS(UNDER)                      &kp LS(EXCL)   &kp N4  &kp N5   &kp N6  &kp MINUS  &kp LS(DQT)
 &kp LEFT_SHIFT  &kp LS(CARET)  &kp LS(POUND)  &kp LBKT      &kp RBKT      &kp LS(PIPE)   &kp F11    &kp F12  &kp LS(QMARK)  &kp N1  &kp N2   &kp N3  &kp PLUS   &kp PIPE
-                                              &kp DEL       &kp COMMA     &kp SEMI       &trans     &trans   &kp EQUAL      &kp N0  &kp DOT
+                                              &kp PERIOD    &kp COMMA     &kp SEMI       &trans     &trans   &kp EQUAL      &kp N0  &kp DOT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
-        raise_layer {
+        Controls {
             // ------------------------------------------------------------------------------------------------------------
             // |       |     |     |      |      |      |                   |      |       |       |      |       |       |
             // |   `   |  1  |  2  |  3   |  4   |  5   |                   |  6   |   7   |   8   |  9   |   0   |       |
@@ -181,19 +150,19 @@
             // |   F7  |  F8 |  F9 |  F10 |  F11 |  F12 |        |  |       |  +   |   -   |   =   |  [   |   ]   |   \   |
             //                     |      |      |      |        |  |       |      |       |       |
 
-            display-name = "controls";
+            display-name = "ctrls";
             bindings = <
-&trans          &format_document  &uncomment  &comment     &show_file  &toggle_header_code_files                    &kp INS   &kp KP_NUMLOCK           &none       &none               &none    &none
-&trans          &kp N1            &kp N2      &kp N3       &kp N4      &kp LC(F9)                                   &none     &kp LA(LS(COMMA))        &kp UP      &kp LS(LA(PERIOD))  &none    &none
-&kp LALT        &kp LGUI          &kp LALT    &kp LSHFT    &kp LCTRL   &kp F11                                      &kp HOME  &kp LEFT                 &kp DOWN    &kp RIGHT           &kp END  &kp TAB
-&kp LEFT_SHIFT  &none             &uncomment  &join_lines  &none       &kp LS(F11)                &trans    &trans  &none     &jump_to_paired_bracket  &kp K_BACK  &kp K_FORWARD       &none    &none
-                                              &trans       &trans      &trans                     &trans    &trans  &trans    &trans                   &trans
+&trans          &format_document  &uncomment  &comment     &show_file  &toggle_header_code_files                    &kp INS   &kp KP_NUMLOCK         &none       &none               &none    &none
+&trans          &kp N1            &kp N2      &kp N3       &kp N4      &kp LC(F9)                                   &none     &kp LA(LS(COMMA))      &kp UP      &kp LS(LA(PERIOD))  &none    &none
+&kp LALT        &kp LGUI          &kp LALT    &kp LSHFT    &kp LCTRL   &kp F11                                      &kp HOME  &kp LEFT               &kp DOWN    &kp RIGHT           &kp END  &kp TAB
+&kp LEFT_SHIFT  &none             &none       &join_lines  &none       &kp LS(F11)                &trans    &trans  &none     &kp LC(RIGHT_BRACKET)  &kp K_BACK  &kp K_FORWARD       &none    &none
+                                              &trans       &trans      &trans                     &trans    &trans  &trans    &trans                 &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
-        layer_3 {
+        Profiles {
             display-name = "Profiles";
             bindings = <
 &bt BT_CLR       &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                              &none  &none  &none   &none  &none  &none
