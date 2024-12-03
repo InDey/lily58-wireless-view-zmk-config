@@ -171,8 +171,6 @@
 &soft_off        &none            &none            &none         &none         &none         &bootloader    &bootloader  &none  &none  &none   &none  &none  &none
                                                    &trans        &none         &none         &none          &none        &none  &none  &trans
             >;
-
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
     };
 };
