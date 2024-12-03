@@ -132,10 +132,10 @@
 
             display-name = "sym";
             bindings = <
-&trans          &kp F1         &kp F2         &kp F3        &kp F4        &kp F5                             &kp F6         &kp F7  &kp F8   &kp F9  &kp F10    &kp N0
+&trans          &kp F1         &kp F2         &kp F3        &kp F4        &kp F5                             &kp F6         &kp F7  &kp F8   &kp F9  &kp F10    &start_hex
 &trans          &kp LS(DLLR)   &kp LS(AT)     &kp LS(LBRC)  &kp LS(RBRC)  &kp LS(AMPS)                       &kp LS(PRCNT)  &kp N7  &kp N8   &kp N9  &kp STAR   &kp FSLH
 &trans          &kp LS(LT)     &kp LS(GT)     &kp LS(LPAR)  &kp LS(RPAR)  &kp LS(UNDER)                      &kp LS(EXCL)   &kp N4  &kp N5   &kp N6  &kp MINUS  &kp LS(DQT)
-&kp LEFT_SHIFT  &kp LS(CARET)  &kp LS(POUND)  &kp LBKT      &kp RBKT      &kp LS(PIPE)   &kp F11    &kp F12  &kp LS(QMARK)  &kp N1  &kp N2   &kp N3  &kp PLUS   &kp PIPE
+&kp LEFT_SHIFT  &kp LS(CARET)  &kp LS(POUND)  &kp LBKT      &kp RBKT      &kp LS(PIPE)   &kp F11    &kp F12  &kp LS(QMARK)  &kp N1  &kp N2   &kp N3  &kp PLUS   &kp ENTER
                                               &kp PERIOD    &kp COMMA     &kp SEMI       &trans     &trans   &kp EQUAL      &kp N0  &kp DOT
             >;
 
