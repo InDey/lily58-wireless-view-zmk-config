@@ -33,6 +33,16 @@
             bindings = <&kp LS(LA(P))>;
             key-positions = <4 0>;
         };
+
+        Game1 {
+            bindings = <&to 4>;
+            key-positions = <29 1>;
+        };
+
+        ToBase {
+            bindings = <&to 0>;
+            key-positions = <29 0>;
+        };
     };
 
     macros {
@@ -137,8 +147,8 @@
 &kp ESC     &kp N1  &kp N2          &kp N3            &kp N4       &kp N5                                &kp N6     &kp N7        &kp N8            &kp N9           &kp N0           &kp GRAVE
 &kp TAB     &kp Q   &kp W           &kp E             &kp R        &kp T                                 &kp Y      &kp U         &kp I             &kp O            &kp P            &kp BACKSLASH
 &mo 1       &kp A   &mt LEFT_ALT S  &mt LEFT_SHIFT D  &mt LCTRL F  &kp G                                 &kp H      &mt RCTRL J   &mt LEFT_SHIFT K  &mt RIGHT_ALT L  &lt 1 SEMICOLON  &lt 3 SQT
-&caps_word  &kp Z   &kp X           &kp C             &kp V        &lt 3 B  &kp EQUAL     &kp RET        &kp N      &kp M         &kp COMMA         &kp DOT          &lt 2 SLASH      &kp RIGHT_WIN
-                                    &kp LEFT_WIN      &kp DELETE   &mo 2    &kp DELETE    &kp BACKSPACE  &kp SPACE  &kp NUMBER_0  &kp EQUAL
+&caps_word  &kp Z   &kp X           &kp C             &kp V        &kp B   &lt 3 EQUAL    &kp RET        &kp N      &kp M         &kp COMMA         &kp DOT          &lt 2 SLASH      &kp RIGHT_WIN
+                                    &kp LEFT_WIN      &kp UNDER    &mo 2   &kp DELETE     &kp BACKSPACE  &kp SPACE  &kp NUMBER_0  &kp EQUAL
             >;
         };
 
@@ -188,6 +198,16 @@
 &rgb_ug RGB_TOG  &rgb_ug RGB_EFR  &rgb_ug RGB_EFF  &none         &none         &none                                     &none  &none  &none   &none  &none  &trans
 &soft_off        &none            &none            &none         &none         &none         &bootloader    &bootloader  &none  &none  &none   &none  &none  &none
                                                    &trans        &none         &none         &none          &none        &none  &none  &trans
+            >;
+        };
+
+        layer_4 {
+            bindings = <
+&kp ESC    &kp N1  &kp N2  &kp N3    &kp N4    &kp N5                          &trans  &trans  &trans  &trans  &trans  &trans
+&kp TAB    &kp Q   &kp W   &kp E     &kp R     &kp T                           &trans  &trans  &trans  &trans  &trans  &trans
+&kp LSHFT  &kp A   &kp S   &kp D     &kp F     &kp G                           &trans  &trans  &trans  &trans  &trans  &trans
+&kp LCTRL  &kp Z   &kp X   &kp C     &kp V     &kp B      &kp H        &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                           &kp LGUI  &kp LALT  &kp SPACE  &kp ENTER    &trans  &trans  &trans  &trans
             >;
         };
     };
