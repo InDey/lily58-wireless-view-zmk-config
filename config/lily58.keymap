@@ -196,7 +196,7 @@
 &bt BT_CLR       &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                              &none  &none  &none   &none  &none  &bootloader
 &bl BL_TOG       &bl BL_DEC       &bl BL_INC       &none         &none         &none                                     &none  &none  &none   &none  &none  &none
 &rgb_ug RGB_TOG  &rgb_ug RGB_EFR  &rgb_ug RGB_EFF  &none         &none         &none                                     &none  &none  &none   &none  &none  &trans
-&soft_off        &none            &none            &none         &none         &none         &bootloader    &bootloader  &none  &none  &none   &none  &none  &none
+&soft_off        &sys_reset       &none            &none         &none         &none         &bootloader    &bootloader  &none  &none  &none   &none  &none  &none
                                                    &trans        &none         &none         &none          &none        &none  &none  &trans
             >;
         };
