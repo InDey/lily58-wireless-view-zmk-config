@@ -162,11 +162,11 @@
 
             display-name = "syms";
             bindings = <
-&kp F12       &kp F1         &kp F2         &kp F3        &kp F4        &kp F5                           &kp F6         &kp F7  &kp F8   &kp F9  &kp F10    &kp F11
-&trans        &kp LS(DLLR)   &kp LS(AT)     &kp LS(LBRC)  &kp LS(RBRC)  &kp LS(AMPS)                     &kp LS(PRCNT)  &kp N7  &kp N8   &kp N9  &kp STAR   &kp FSLH
-&kp CAPSLOCK  &kp LS(LT)     &kp LS(GT)     &kp LS(LPAR)  &kp LS(RPAR)  &kp LS(UNDER)                    &kp LS(EXCL)   &kp N4  &kp N5   &kp N6  &kp MINUS  &kp LS(DQT)
-&trans        &kp LS(CARET)  &kp LS(POUND)  &kp LBKT      &kp RBKT      &kp LS(PIPE)   &trans    &trans  &kp LS(QMARK)  &kp N1  &kp N2   &kp N3  &kp PLUS   &kp EQUAL
-                                            &trans        &trans        &trans         &trans    &trans  &trans         &kp N0  &kp DOT
+&kp F12       &kp F1         &kp F2         &kp F3        &kp F4        &kp F5                                      &kp F6         &kp F7  &kp F8   &kp F9  &kp F10    &kp F11
+&trans        &kp LS(DLLR)   &kp LS(AT)     &kp LS(LBRC)  &kp LS(RBRC)  &kp LS(AMPS)                                &kp LS(PRCNT)  &kp N7  &kp N8   &kp N9  &kp STAR   &kp FSLH
+&kp CAPSLOCK  &kp LS(LT)     &kp LS(GT)     &kp LS(LPAR)  &kp LS(RPAR)  &kp LS(UNDER)                               &kp LS(EXCL)   &kp N4  &kp N5   &kp N6  &kp MINUS  &kp LS(DQT)
+&trans        &kp LS(CARET)  &kp LS(POUND)  &kp LBKT      &kp RBKT      &kp LS(PIPE)   &trans           &trans      &kp LS(QMARK)  &kp N1  &kp N2   &kp N3  &kp PLUS   &kp EQUAL
+                                            &trans        &trans        &trans         &kp BACKSPACE    &kp DELETE  &trans         &kp N0  &kp DOT
             >;
         };
 
@@ -194,7 +194,7 @@
             display-name = "Profiles";
             bindings = <
 &bt BT_CLR       &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                              &none  &none  &none   &none  &none  &bootloader
-&bl BL_TOG       &bl BL_DEC       &bl BL_INC       &none         &none         &none                                     &none  &none  &none   &none  &none  &none
+&bl BL_TOG       &bl BL_DEC       &bl BL_INC       &none         &bootloader   &none                                     &none  &none  &none   &none  &none  &none
 &rgb_ug RGB_TOG  &rgb_ug RGB_EFR  &rgb_ug RGB_EFF  &none         &none         &none                                     &none  &none  &none   &none  &none  &trans
 &soft_off        &sys_reset       &none            &none         &none         &none         &bootloader    &bootloader  &none  &none  &none   &none  &none  &none
                                                    &trans        &none         &none         &none          &none        &none  &none  &trans
