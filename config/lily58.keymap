@@ -43,11 +43,6 @@
             bindings = <&to 0>;
             key-positions = <29 0>;
         };
-
-        ToGame2 {
-            bindings = <&to 5>;
-            key-positions = <29 2>;
-        };
     };
 
     macros {
@@ -136,6 +131,23 @@
         };
     };
 
+    behaviors {
+        slow_finger_mod_tap: slow_finger_mod_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "SLOW_FINGER_MOD_TAP";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            flavor = "balanced";
+            quick-tap-ms = <200>;
+            tapping-term-ms = <200>;
+            require-prior-idle-ms = <125>;
+            hold-while-undecided;
+            hold-while-undecided-linger;
+            hold-trigger-key-positions = <42 25 26 27 28 31 32 33 34 48 35>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -149,11 +161,11 @@
 
             display-name = "Base";
             bindings = <
-&kp ESC     &kp N1  &kp N2          &kp N3            &kp N4       &kp N5                                &kp N6     &kp N7        &kp N8            &kp N9           &kp N0           &kp GRAVE
-&kp TAB     &kp Q   &kp W           &kp E             &kp R        &kp T                                 &kp Y      &kp U         &kp I             &kp O            &kp P            &kp BACKSLASH
-&mo 1       &kp A   &mt LEFT_ALT S  &mt LEFT_SHIFT D  &mt LCTRL F  &kp G                                 &kp H      &mt RCTRL J   &mt LEFT_SHIFT K  &mt RIGHT_ALT L  &lt 1 SEMICOLON  &lt 3 SQT
-&caps_word  &kp Z   &kp X           &kp C             &kp V        &kp B   &lt 3 EQUAL    &kp RET        &kp N      &kp M         &kp COMMA         &kp DOT          &lt 2 SLASH      &kp RIGHT_WIN
-                                    &kp LEFT_WIN      &kp UNDER    &mo 2   &kp DELETE     &kp BACKSPACE  &kp SPACE  &kp NUMBER_0  &kp EQUAL
+&kp ESC     &kp N1  &kp N2          &kp N3            &kp N4       &kp N5                                &kp N6     &kp N7       &kp N8            &kp N9           &kp N0           &kp GRAVE
+&kp TAB     &kp Q   &kp W           &kp E             &kp R        &kp T                                 &kp Y      &kp U        &kp I             &kp O            &kp P            &kp BACKSLASH
+&mo 1       &kp A   &mt LEFT_ALT S  &mt LEFT_SHIFT D  &mt LCTRL F  &kp G                                 &kp H      &mt RCTRL J  &mt LEFT_SHIFT K  &mt RIGHT_ALT L  &lt 1 SEMICOLON  &lt 3 SQT
+&caps_word  &kp Z   &kp X           &kp C             &kp V        &kp B   &lt 3 EQUAL    &kp RET        &kp N      &kp M        &kp COMMA         &kp DOT          &lt 2 SLASH      &kp RIGHT_WIN
+                                    &kp LEFT_WIN      &kp DELETE   &mo 2   &kp DELETE     &kp BACKSPACE  &kp SPACE  &kp EQUAL    &kp NUMBER_0
             >;
         };
 
@@ -167,11 +179,11 @@
 
             display-name = "syms";
             bindings = <
-&kp F12       &kp F1         &kp F2         &kp F3        &kp F4        &kp F5                                      &kp F6         &kp F7  &kp F8   &kp F9  &kp F10    &kp F11
-&trans        &kp LS(DLLR)   &kp LS(AT)     &kp LS(LBRC)  &kp LS(RBRC)  &kp LS(AMPS)                                &kp LS(PRCNT)  &kp N7  &kp N8   &kp N9  &kp STAR   &kp FSLH
-&kp CAPSLOCK  &kp LS(LT)     &kp LS(GT)     &kp LS(LPAR)  &kp LS(RPAR)  &kp LS(UNDER)                               &kp LS(EXCL)   &kp N4  &kp N5   &kp N6  &kp MINUS  &kp LS(DQT)
-&trans        &kp LS(CARET)  &kp LS(POUND)  &kp LBKT      &kp RBKT      &kp LS(PIPE)   &trans           &trans      &kp LS(QMARK)  &kp N1  &kp N2   &kp N3  &kp PLUS   &kp EQUAL
-                                            &trans        &trans        &trans         &kp BACKSPACE    &kp DELETE  &trans         &kp N0  &kp DOT
+&kp F12       &kp F1         &kp F2         &kp F3        &kp F4        &kp F5                                      &kp F6         &kp F7  &kp F8  &kp F9  &kp F10    &kp F11
+&trans        &kp LS(DLLR)   &kp LS(AT)     &kp LS(LBRC)  &kp LS(RBRC)  &kp LS(AMPS)                                &kp LS(PRCNT)  &kp N7  &kp N8  &kp N9  &kp STAR   &kp FSLH
+&kp CAPSLOCK  &kp LS(LT)     &kp LS(GT)     &kp LS(LPAR)  &kp LS(RPAR)  &kp LS(UNDER)                               &kp LS(EXCL)   &kp N4  &kp N5  &kp N6  &kp MINUS  &kp LS(DQT)
+&trans        &kp LS(CARET)  &kp LS(POUND)  &kp LBKT      &kp RBKT      &kp LS(PIPE)   &trans           &trans      &kp LS(QMARK)  &kp N1  &kp N2  &kp N3  &kp PLUS   &kp PERIOD
+                                            &trans        &trans        &trans         &kp BACKSPACE    &kp DELETE  &trans         &trans  &trans
             >;
         };
 
@@ -213,16 +225,6 @@
 &kp LSHFT  &kp G   &kp A   &kp S      &kp D     &kp F                             &kp H      &kp J   &kp K      &kp L    &kp SEMI  &kp SQT
 &kp LCTRL  &kp B   &kp Z   &kp X      &kp C     &kp V      &kp H        &kp RET   &kp N      &kp M   &kp COMMA  &kp DOT  &kp FSLH  &kp RGUI
                            &kp LCTRL  &kp LALT  &kp SPACE  &kp ENTER    &kp BSPC  &kp SPACE  &kp N0  &kp EQUAL
-            >;
-        };
-
-        Game2 {
-            bindings = <
-&kp ESC    &kp N1  &kp N2  &kp N3  &kp N4  &kp N5                            &kp N6     &kp N7           &kp N8           &kp N9           &kp N0        &kp GRAVE
-&kp TAB    &kp Q   &kp W   &kp E   &kp R   &kp T                             &kp Y      &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_MINUS  &kp KP_DIVIDE
-&kp LSHFT  &kp A   &kp S   &kp D   &kp F   &kp G                             &kp H      &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_PLUS   &kp KP_MULTIPLY
-&kp LCTRL  &kp Z   &kp X   &kp C   &kp V   &kp B      &kp LALT    &kp ENTER  &kp COMMA  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_ENTER  &kp DOT
-                           &kp N   &kp M   &kp SPACE  &trans      &trans     &kp SPACE  &kp KP_NUMBER_0  &kp KP_DOT
             >;
         };
     };
