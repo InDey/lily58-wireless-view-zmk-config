@@ -34,7 +34,7 @@
             key-positions = <4 0>;
         };
 
-        Game1 {
+        ToGame1 {
             bindings = <&to 4>;
             key-positions = <29 1>;
         };
@@ -42,6 +42,11 @@
         ToBase {
             bindings = <&to 0>;
             key-positions = <29 0>;
+        };
+
+        ToGame2 {
+            bindings = <&to 5>;
+            key-positions = <29 2>;
         };
     };
 
@@ -201,26 +206,24 @@
             >;
         };
 
-        layer_4 {
+        game1 {
             bindings = <
-&kp ESC    &kp N1  &kp N2  &kp N3    &kp N4    &kp N5                          &trans  &trans  &trans  &trans  &trans  &trans
-&kp TAB    &kp Q   &kp W   &kp E     &kp R     &kp T                           &trans  &trans  &trans  &trans  &trans  &trans
-&kp LSHFT  &kp A   &kp S   &kp D     &kp F     &kp G                           &trans  &trans  &trans  &trans  &trans  &trans
-&kp LCTRL  &kp Z   &kp X   &kp C     &kp V     &kp B      &kp H        &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                           &kp LGUI  &kp LALT  &kp SPACE  &kp ENTER    &trans  &trans  &trans  &trans
+&kp ESC    &kp N1  &kp N2  &kp N3     &kp N4    &kp N5                            &kp N6     &kp N7  &kp N8     &kp N9   &kp N0    &kp GRAVE
+&kp TAB    &kp T   &kp Q   &kp W      &kp E     &kp R                             &kp Y      &kp U   &kp I      &kp O    &kp P     &kp BSLH
+&kp LSHFT  &kp G   &kp A   &kp S      &kp D     &kp F                             &kp H      &kp J   &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LCTRL  &kp B   &kp Z   &kp X      &kp C     &kp V      &kp H        &kp RET   &kp N      &kp M   &kp COMMA  &kp DOT  &kp FSLH  &kp RGUI
+                           &kp LCTRL  &kp LALT  &kp SPACE  &kp ENTER    &kp BSPC  &kp SPACE  &kp N0  &kp EQUAL
             >;
         };
 
-        extra_1 {
-            status = "reserved";
-        };
-
-        extra_2 {
-            status = "reserved";
-        };
-
-        extra_3 {
-            status = "reserved";
+        Game2 {
+            bindings = <
+&kp ESC    &kp N1  &kp N2  &kp N3  &kp N4  &kp N5                            &kp N6     &kp N7           &kp N8           &kp N9           &kp N0        &kp GRAVE
+&kp TAB    &kp Q   &kp W   &kp E   &kp R   &kp T                             &kp Y      &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_MINUS  &kp KP_DIVIDE
+&kp LSHFT  &kp A   &kp S   &kp D   &kp F   &kp G                             &kp H      &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_PLUS   &kp KP_MULTIPLY
+&kp LCTRL  &kp Z   &kp X   &kp C   &kp V   &kp B      &kp LALT    &kp ENTER  &kp COMMA  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_ENTER  &kp DOT
+                           &kp N   &kp M   &kp SPACE  &trans      &trans     &kp SPACE  &kp KP_NUMBER_0  &kp KP_DOT
+            >;
         };
     };
 };
