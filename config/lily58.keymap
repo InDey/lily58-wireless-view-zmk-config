@@ -155,6 +155,18 @@
             require-prior-idle-ms = <125>;
             flavor = "balanced";
         };
+
+        layer_caps: layer_caps {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LAYER_CAPS";
+            bindings = <&mo>, <&caps_word>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "tap-unless-interrupted";
+            quick-tap-ms = <200>;
+            require-prior-idle-ms = <125>;
+        };
     };
 
     keymap {
@@ -170,11 +182,11 @@
 
             display-name = "Base";
             bindings = <
-&kp ESC     &kp N1  &kp N2                    &kp N3                      &kp N4                 &kp N5                                           &kp N6     &kp N7                 &kp N8                      &kp N9                     &kp N0                      &kp GRAVE
-&kp TAB     &kp Q   &kp W                     &kp E                       &kp R                  &kp T                                            &kp Y      &kp U                  &kp I                       &kp O                      &kp P                       &kp BACKSLASH
-&mo 1       &kp A   &hold_tap_200 LEFT_ALT S  &hold_tap_200 LEFT_SHIFT D  &hold_tap_200 LCTRL F  &kp G                                            &kp H      &hold_tap_200 RCTRL J  &hold_tap_200 LEFT_SHIFT K  &hold_tap_200 RIGHT_ALT L  &layer_tap_200 1 SEMICOLON  &layer_tap_200 3 SQT
-&caps_word  &kp Z   &kp X                     &kp C                       &kp V                  &kp B   &layer_tap_200 3 EQUAL    &kp RET        &kp N      &kp M                  &kp COMMA                   &kp DOT                    &layer_tap_200 2 SLASH      &kp RIGHT_WIN
-                                              &kp LEFT_WIN                &kp DELETE             &mo 2   &kp DELETE                &kp BACKSPACE  &kp SPACE  &kp EQUAL              &kp NUMBER_0
+&kp ESC          &kp N1  &kp N2                    &kp N3                      &kp N4                 &kp N5                          &kp N6     &kp N7                 &kp N8                      &kp N9                     &kp N0                      &kp GRAVE
+&kp TAB          &kp Q   &kp W                     &kp E                       &kp R                  &kp T                           &kp Y      &kp U                  &kp I                       &kp O                      &kp P                       &kp BACKSLASH
+&mo 1            &kp A   &hold_tap_200 LEFT_ALT S  &hold_tap_200 LEFT_SHIFT D  &hold_tap_200 LCTRL F  &kp G                           &kp H      &hold_tap_200 RCTRL J  &hold_tap_200 LEFT_SHIFT K  &hold_tap_200 RIGHT_ALT L  &layer_tap_200 1 SEMICOLON  &layer_tap_200 3 SQT
+&layer_caps 3 0  &kp Z   &kp X                     &kp C                       &kp V                  &kp B   &kp ENTER    &kp RET    &kp N      &kp M                  &kp COMMA                   &kp DOT                    &layer_tap_200 2 SLASH      &mo 1
+                                                   &kp LEFT_WIN                &kp DELETE             &mo 2   &kp SPACE    &kp SPACE  &kp EQUAL  &kp BACKSPACE          &kp RIGHT_WIN
             >;
         };
 
@@ -188,11 +200,11 @@
 
             display-name = "syms";
             bindings = <
-&kp F12       &kp F1         &kp F2         &kp F3        &kp F4        &kp F5                                      &kp F6         &kp F7  &kp F8  &kp F9  &kp F10    &kp F11
-&trans        &kp LS(DLLR)   &kp LS(AT)     &kp LS(LBRC)  &kp LS(RBRC)  &kp LS(AMPS)                                &kp LS(PRCNT)  &kp N7  &kp N8  &kp N9  &kp STAR   &kp FSLH
-&kp CAPSLOCK  &kp LS(LT)     &kp LS(GT)     &kp LS(LPAR)  &kp LS(RPAR)  &kp LS(UNDER)                               &kp LS(EXCL)   &kp N4  &kp N5  &kp N6  &kp MINUS  &kp LS(DQT)
-&trans        &kp LS(CARET)  &kp LS(POUND)  &kp LBKT      &kp RBKT      &kp LS(PIPE)   &trans           &trans      &kp LS(QMARK)  &kp N1  &kp N2  &kp N3  &kp PLUS   &kp PERIOD
-                                            &trans        &trans        &trans         &kp BACKSPACE    &kp DELETE  &trans         &trans  &trans
+&trans        &kp F1         &kp F2         &kp F3        &kp F4        &kp F5                                     &kp F6         &kp F7  &kp F8      &kp F9  &kp F10    &kp F11
+&trans        &kp LS(DLLR)   &kp LS(AT)     &kp LS(LBRC)  &kp LS(RBRC)  &kp LS(AMPS)                               &kp LS(PRCNT)  &kp N7  &kp N8      &kp N9  &kp STAR   &kp FSLH
+&trans        &kp LS(LT)     &kp LS(GT)     &kp LS(LPAR)  &kp LS(RPAR)  &kp LS(UNDER)                              &kp LS(EXCL)   &kp N4  &kp N5      &kp N6  &kp MINUS  &kp LS(DQT)
+&kp CAPSLOCK  &kp LS(CARET)  &kp LS(POUND)  &kp LBKT      &kp RBKT      &kp LS(PIPE)   &kp F9     &kp RIGHT_SHIFT  &kp LS(QMARK)  &kp N1  &kp N2      &kp N3  &kp PLUS   &hold_tap_200 RIGHT_WIN UNDERSCORE
+                                            &kp F9        &kp F11       &kp F10        &kp F12    &kp SPACE        &kp EQUAL      &kp N0  &kp PERIOD
             >;
         };
 
@@ -220,20 +232,20 @@
             display-name = "Profiles";
             bindings = <
 &bt BT_CLR       &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                              &none  &none  &none   &none  &none  &bootloader
-&bl BL_TOG       &bl BL_DEC       &bl BL_INC       &none         &bootloader   &none                                     &none  &none  &none   &none  &none  &none
+&bl BL_TOG       &bl BL_DEC       &bl BL_INC       &none         &none         &none                                     &none  &none  &none   &none  &none  &none
 &rgb_ug RGB_TOG  &rgb_ug RGB_EFR  &rgb_ug RGB_EFF  &none         &none         &none                                     &none  &none  &none   &none  &none  &trans
-&soft_off        &sys_reset       &none            &none         &none         &none         &bootloader    &bootloader  &none  &none  &none   &none  &none  &none
+&none            &none            &none            &none         &none         &none         &bootloader    &bootloader  &none  &none  &none   &none  &none  &none
                                                    &trans        &none         &none         &none          &none        &none  &none  &trans
             >;
         };
 
         game1 {
             bindings = <
-&kp ESC    &kp N1  &kp N2  &kp N3     &kp N4    &kp N5                            &kp N6     &kp N7  &kp N8     &kp N9   &kp N0    &kp GRAVE
-&kp TAB    &kp T   &kp Q   &kp W      &kp E     &kp R                             &kp Y      &kp U   &kp I      &kp O    &kp P     &kp BSLH
-&kp LSHFT  &kp G   &kp A   &kp S      &kp D     &kp F                             &kp H      &kp J   &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LCTRL  &kp B   &kp Z   &kp X      &kp C     &kp V      &kp H        &kp RET   &kp N      &kp M   &kp COMMA  &kp DOT  &kp FSLH  &kp RGUI
-                           &kp LCTRL  &kp LALT  &kp SPACE  &kp ENTER    &kp BSPC  &kp SPACE  &kp N0  &kp EQUAL
+&kp ESC    &kp N1  &kp N2  &kp N3        &kp N4     &kp N5                             &kp N6     &kp N7         &kp N8      &kp N9   &kp N0    &kp GRAVE
+&kp TAB    &kp T   &kp Q   &kp W         &kp E      &kp R                              &kp Y      &kp U          &kp I       &kp O    &kp P     &kp BSLH
+&kp LSHFT  &kp G   &kp A   &kp S         &kp D      &kp F                              &kp H      &kp J          &kp K       &kp L    &kp SEMI  &kp SQT
+&kp LCTRL  &kp B   &kp Z   &kp X         &kp C      &kp V      &kp ENTER    &kp RET    &kp N      &kp M          &kp COMMA   &kp DOT  &kp FSLH  &kp RGUI
+                           &kp LEFT_ALT  &kp LCTRL  &kp SPACE  &kp SPACE    &kp SPACE  &kp EQUAL  &kp BACKSPACE  &kp DELETE
             >;
         };
     };
