@@ -132,9 +132,9 @@
     };
 
     behaviors {
-        slow_finger_mod_tap: slow_finger_mod_tap {
+        hold_tap_200: hold_tap_200 {
             compatible = "zmk,behavior-hold-tap";
-            label = "SLOW_FINGER_MOD_TAP";
+            label = "HOLD_TAP_200";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
@@ -144,7 +144,20 @@
             require-prior-idle-ms = <125>;
             hold-while-undecided;
             hold-while-undecided-linger;
-            hold-trigger-key-positions = <42 25 26 27 28 31 32 33 34 48 35>;
+        };
+
+        layer_tap_200: layer_tap_200 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LAYER_TAP_200";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
+            require-prior-idle-ms = <125>;
+            flavor = "balanced";
+            hold-while-undecided;
+            hold-while-undecided-linger;
         };
     };
 
@@ -161,11 +174,11 @@
 
             display-name = "Base";
             bindings = <
-&kp ESC     &kp N1  &kp N2          &kp N3            &kp N4       &kp N5                                &kp N6     &kp N7       &kp N8            &kp N9           &kp N0           &kp GRAVE
-&kp TAB     &kp Q   &kp W           &kp E             &kp R        &kp T                                 &kp Y      &kp U        &kp I             &kp O            &kp P            &kp BACKSLASH
-&mo 1       &kp A   &mt LEFT_ALT S  &mt LEFT_SHIFT D  &mt LCTRL F  &kp G                                 &kp H      &mt RCTRL J  &mt LEFT_SHIFT K  &mt RIGHT_ALT L  &lt 1 SEMICOLON  &lt 3 SQT
-&caps_word  &kp Z   &kp X           &kp C             &kp V        &kp B   &lt 3 EQUAL    &kp RET        &kp N      &kp M        &kp COMMA         &kp DOT          &lt 2 SLASH      &kp RIGHT_WIN
-                                    &kp LEFT_WIN      &kp DELETE   &mo 2   &kp DELETE     &kp BACKSPACE  &kp SPACE  &kp EQUAL    &kp NUMBER_0
+&kp ESC     &kp N1  &kp N2                    &kp N3                      &kp N4                 &kp N5                                           &kp N6     &kp N7                 &kp N8                      &kp N9                     &kp N0                      &kp GRAVE
+&kp TAB     &kp Q   &kp W                     &kp E                       &kp R                  &kp T                                            &kp Y      &kp U                  &kp I                       &kp O                      &kp P                       &kp BACKSLASH
+&mo 1       &kp A   &hold_tap_200 LEFT_ALT S  &hold_tap_200 LEFT_SHIFT D  &hold_tap_200 LCTRL F  &kp G                                            &kp H      &hold_tap_200 RCTRL J  &hold_tap_200 LEFT_SHIFT K  &hold_tap_200 RIGHT_ALT L  &layer_tap_200 1 SEMICOLON  &layer_tap_200 3 SQT
+&caps_word  &kp Z   &kp X                     &kp C                       &kp V                  &kp B   &layer_tap_200 3 EQUAL    &kp RET        &kp N      &kp M                  &kp COMMA                   &kp DOT                    &layer_tap_200 2 SLASH      &kp RIGHT_WIN
+                                              &kp LEFT_WIN                &kp DELETE             &mo 2   &kp DELETE                &kp BACKSPACE  &kp SPACE  &kp EQUAL              &kp NUMBER_0
             >;
         };
 
