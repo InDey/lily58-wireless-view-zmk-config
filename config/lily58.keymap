@@ -142,8 +142,6 @@
             quick-tap-ms = <200>;
             tapping-term-ms = <200>;
             require-prior-idle-ms = <125>;
-            hold-while-undecided;
-            hold-while-undecided-linger;
         };
 
         layer_tap_200: layer_tap_200 {
@@ -156,8 +154,6 @@
             quick-tap-ms = <200>;
             require-prior-idle-ms = <125>;
             flavor = "balanced";
-            hold-while-undecided;
-            hold-while-undecided-linger;
         };
     };
 
