@@ -219,7 +219,7 @@
 &trans          &format_document  &uncomment      &comment     &show_file  &toggle_header_code_files                    &kp INS   &kp KP_NUMLOCK         &previous_bookmark  &toggle_bookmark    &toggle_bookmark  &kp K_SCROLL_UP
 &trans          &none             &none           &none        &none       &kp LC(F9)                                   &none     &kp LA(LS(COMMA))      &kp UP              &kp LS(LA(PERIOD))  &none             &kp K_SCROLL_DOWN
 &kp LALT        &kp LGUI          &kp LALT        &kp LSHFT    &kp LCTRL   &kp F11                                      &kp HOME  &kp LEFT               &kp DOWN            &kp RIGHT           &kp END           &kp TAB
-&kp LEFT_SHIFT  &none             &kp LC(PERIOD)  &join_lines  &none       &kp LS(F11)                &trans    &trans  &none     &kp LC(RIGHT_BRACKET)  &kp K_BACK          &kp K_FORWARD       &none             &none
+&kp LEFT_SHIFT  &none             &kp LC(PERIOD)  &join_lines  &none       &kp LS(F11)                &trans    &trans  &none     &kp LC(RIGHT_BRACKET)  &kp K_PREV          &kp K_NEXT          &none             &none
                                                   &trans       &trans      &trans                     &trans    &trans  &trans    &trans                 &trans
             >;
 
