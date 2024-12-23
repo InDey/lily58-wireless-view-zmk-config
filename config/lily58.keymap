@@ -180,11 +180,11 @@
 
             display-name = "Base";
             bindings = <
-&kp ESC     &kp N1  &kp N2                    &kp N3                      &kp N4                 &kp N5                                                          &kp N6     &kp N7                 &kp N8                      &kp N9                     &kp N0                      &kp GRAVE
-&kp TAB     &kp Q   &kp W                     &kp E                       &kp R                  &kp T                                                           &kp Y      &kp U                  &kp I                       &kp O                      &kp P                       &kp BACKSLASH
-&mo 1       &kp A   &hold_tap_200 LEFT_ALT S  &hold_tap_200 LEFT_SHIFT D  &hold_tap_200 LCTRL F  &hold_tap_200 LCTRL G                                           &kp H      &hold_tap_200 RCTRL J  &hold_tap_200 LEFT_SHIFT K  &hold_tap_200 RIGHT_ALT L  &layer_tap_200 1 SEMICOLON  &layer_tap_200 3 SQT
-&caps_word  &kp Z   &kp X                     &kp C                       &kp V                  &kp B                  &layer_tap_200 3 ENTER    &kp RET        &kp N      &kp M                  &kp COMMA                   &kp DOT                    &layer_tap_200 2 SLASH      &mo 1
-                                              &kp LEFT_WIN                &kp DELETE             &mo 2                  &kp SPACE                 &kp BACKSPACE  &kp SPACE  &kp UNDERSCORE         &kp RIGHT_WIN
+&kp ESC     &kp N1  &kp N2                    &kp N3                      &kp N4                 &kp N5                                                                       &kp N6                  &kp N7                 &kp N8                      &kp N9                     &kp N0                      &kp GRAVE
+&kp TAB     &kp Q   &kp W                     &kp E                       &kp R                  &kp T                                                                        &kp Y                   &kp U                  &kp I                       &kp O                      &kp P                       &kp BACKSLASH
+&mo 1       &kp A   &hold_tap_200 LEFT_ALT S  &hold_tap_200 LEFT_SHIFT D  &hold_tap_200 LCTRL F  &hold_tap_200 LCTRL G                                                        &kp H                   &hold_tap_200 RCTRL J  &hold_tap_200 LEFT_SHIFT K  &hold_tap_200 RIGHT_ALT L  &layer_tap_200 1 SEMICOLON  &layer_tap_200 3 SQT
+&caps_word  &kp Z   &kp X                     &kp C                       &kp V                  &kp B                  &layer_tap_200 3 ENTER    &kp RET                     &kp N                   &kp M                  &kp COMMA                   &kp DOT                    &layer_tap_200 2 SLASH      &mo 1
+                                              &kp LEFT_WIN                &kp DELETE             &mo 2                  &layer_tap_200 1 SPACE    &layer_tap_200 1 BACKSPACE  &layer_tap_200 2 SPACE  &kp UNDERSCORE         &kp RIGHT_WIN
             >;
         };
 
