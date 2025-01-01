@@ -180,11 +180,11 @@
 
             display-name = "Base";
             bindings = <
-&kp ESC     &kp N1  &kp N2                    &kp N3                      &kp N4                 &kp N5                                                                       &kp N6                  &kp N7                 &kp N8                      &kp N9                     &kp N0                      &kp GRAVE
-&kp TAB     &kp Q   &kp W                     &kp E                       &kp R                  &kp T                                                                        &kp Y                   &kp U                  &kp I                       &kp O                      &kp P                       &kp BACKSLASH
-&mo 1       &kp A   &hold_tap_200 LEFT_ALT S  &hold_tap_200 LEFT_SHIFT D  &hold_tap_200 LCTRL F  &hold_tap_200 LCTRL G                                                        &kp H                   &hold_tap_200 RCTRL J  &hold_tap_200 LEFT_SHIFT K  &hold_tap_200 RIGHT_ALT L  &layer_tap_200 1 SEMICOLON  &layer_tap_200 3 SQT
-&caps_word  &kp Z   &kp X                     &kp C                       &kp V                  &kp B                  &layer_tap_200 3 ENTER    &kp RET                     &kp N                   &kp M                  &kp COMMA                   &kp DOT                    &layer_tap_200 2 SLASH      &mo 1
-                                              &kp LEFT_WIN                &kp DELETE             &mo 2                  &layer_tap_200 1 SPACE    &layer_tap_200 1 BACKSPACE  &layer_tap_200 2 SPACE  &kp UNDERSCORE         &kp RIGHT_WIN
+&kp ESC               &kp N1  &kp N2                    &kp N3                      &kp N4                 &kp N5                                                                       &kp N6                  &kp N7                 &kp N8                      &kp N9                     &kp N0                      &kp GRAVE
+&layer_tap_200 2 TAB  &kp Q   &kp W                     &kp E                       &kp R                  &kp T                                                                        &kp Y                   &kp U                  &kp I                       &kp O                      &kp P                       &kp BACKSLASH
+&mo 1                 &kp A   &hold_tap_200 LEFT_ALT S  &hold_tap_200 LEFT_SHIFT D  &hold_tap_200 LCTRL F  &hold_tap_200 LCTRL G                                                        &kp H                   &hold_tap_200 RCTRL J  &hold_tap_200 LEFT_SHIFT K  &hold_tap_200 RIGHT_ALT L  &layer_tap_200 1 SEMICOLON  &layer_tap_200 3 SQT
+&caps_word            &kp Z   &kp X                     &kp C                       &kp V                  &kp B                  &layer_tap_200 3 ENTER    &kp RET                     &kp N                   &kp M                  &kp COMMA                   &kp DOT                    &layer_tap_200 2 SLASH      &mo 1
+                                                        &kp LEFT_WIN                &kp DELETE             &mo 2                  &layer_tap_200 1 SPACE    &layer_tap_200 1 BACKSPACE  &layer_tap_200 2 SPACE  &kp UNDERSCORE         &kp RIGHT_WIN
             >;
         };
 
@@ -198,11 +198,11 @@
 
             display-name = "syms";
             bindings = <
-&trans        &kp F1         &kp F2         &kp F3        &kp F4        &kp F5                                       &kp F6         &kp F7  &kp F8      &kp F9  &kp F10    &kp F11
-&trans        &kp LS(DLLR)   &kp LS(AT)     &kp LS(LBRC)  &kp LS(RBRC)  &kp LS(AMPS)                                 &kp LS(PRCNT)  &kp N7  &kp N8      &kp N9  &kp STAR   &kp FSLH
-&trans        &kp LS(LT)     &kp LS(GT)     &kp LS(LPAR)  &kp LS(RPAR)  &kp LS(UNDER)                                &kp LS(EXCL)   &kp N4  &kp N5      &kp N6  &kp MINUS  &kp LS(DQT)
-&kp CAPSLOCK  &kp LS(CARET)  &kp LS(POUND)  &kp LBKT      &kp RBKT      &kp LS(PIPE)   &kp LCTRL    &kp RIGHT_SHIFT  &kp LS(QMARK)  &kp N1  &kp N2      &kp N3  &kp PLUS   &hold_tap_200 RIGHT_WIN UNDERSCORE
-                                            &kp F9        &kp F11       &kp F10        &kp F12      &trans           &kp EQUAL      &kp N0  &kp PERIOD
+&trans        &kp F1         &kp F2            &kp F3                &kp F4                 &kp F5                             &kp F6           &kp F7  &kp F8      &kp F9  &kp F10    &kp F11
+&trans        &kp DOLLAR     &kp AT_SIGN       &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp AMPERSAND                      &kp PERCENT      &kp N7  &kp N8      &kp N9  &kp STAR   &kp FSLH
+&trans        &kp LESS_THAN  &kp GREATER_THAN  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UNDERSCORE                     &kp POUND        &kp N4  &kp N5      &kp N6  &kp MINUS  &kp DOUBLE_QUOTES
+&kp CAPSLOCK  &none          &kp CARET         &kp LBKT              &kp RBKT               &kp QUESTION    &trans     &trans  &kp EXCLAMATION  &kp N1  &kp N2      &kp N3  &kp PLUS   &hold_tap_200 RIGHT_WIN UNDERSCORE
+                                               &kp LCTRL             &kp LEFT_ALT           &kp LEFT_SHIFT  &kp F12    &trans  &kp EQUAL        &kp N0  &kp PERIOD
             >;
         };
 
@@ -217,8 +217,8 @@
             display-name = "ctrls";
             bindings = <
 &trans          &format_document  &uncomment      &comment     &show_file  &toggle_header_code_files                    &kp INS   &kp KP_NUMLOCK         &previous_bookmark  &toggle_bookmark    &toggle_bookmark  &kp K_SCROLL_UP
-&trans          &none             &none           &none        &none       &kp LC(F9)                                   &none     &kp LA(LS(COMMA))      &kp UP              &kp LS(LA(PERIOD))  &none             &kp K_SCROLL_DOWN
-&kp LALT        &kp LGUI          &kp LALT        &kp LSHFT    &kp LCTRL   &kp F11                                      &kp HOME  &kp LEFT               &kp DOWN            &kp RIGHT           &kp END           &kp TAB
+&trans          &kp F9            &kp F10         &kp F11      &kp F5      &kp F12                                      &none     &kp LA(LS(COMMA))      &kp UP              &kp LS(LA(PERIOD))  &none             &kp K_SCROLL_DOWN
+&kp LALT        &kp LGUI          &kp LALT        &kp LSHFT    &kp LCTRL   &kp LCTRL                                    &kp HOME  &kp LEFT               &kp DOWN            &kp RIGHT           &kp END           &kp TAB
 &kp LEFT_SHIFT  &none             &kp LC(PERIOD)  &join_lines  &none       &kp LS(F11)                &trans    &trans  &none     &kp LC(RIGHT_BRACKET)  &kp K_PREV          &kp K_NEXT          &none             &none
                                                   &trans       &trans      &trans                     &trans    &trans  &trans    &trans                 &trans
             >;
