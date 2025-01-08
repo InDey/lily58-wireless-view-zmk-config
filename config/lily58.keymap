@@ -180,11 +180,11 @@
 
             display-name = "Base";
             bindings = <
-&kp ESC               &kp N1  &kp N2                    &kp N3                      &kp N4                 &kp N5                                                                       &kp N6                  &kp N7                 &kp N8                      &kp N9                     &kp N0                      &kp GRAVE
-&layer_tap_200 2 TAB  &kp Q   &kp W                     &kp E                       &kp R                  &kp T                                                                        &kp Y                   &kp U                  &kp I                       &kp O                      &kp P                       &kp BACKSLASH
-&mo 1                 &kp A   &hold_tap_200 LEFT_ALT S  &hold_tap_200 LEFT_SHIFT D  &hold_tap_200 LCTRL F  &hold_tap_200 LCTRL G                                                        &kp H                   &hold_tap_200 RCTRL J  &hold_tap_200 LEFT_SHIFT K  &hold_tap_200 RIGHT_ALT L  &layer_tap_200 1 SEMICOLON  &layer_tap_200 3 SQT
-&caps_word            &kp Z   &kp X                     &kp C                       &kp V                  &kp B                  &layer_tap_200 3 ENTER    &kp RET                     &kp N                   &kp M                  &kp COMMA                   &kp DOT                    &layer_tap_200 2 SLASH      &mo 1
-                                                        &kp LEFT_WIN                &kp DELETE             &mo 2                  &layer_tap_200 1 SPACE    &layer_tap_200 1 BACKSPACE  &layer_tap_200 2 SPACE  &kp UNDERSCORE         &kp RIGHT_WIN
+&kp ESC               &kp N1              &kp N2                    &kp N3                      &kp N4                 &kp N5                                                          &kp N6                 &kp N7                 &kp N8                      &kp N9                     &kp N0                  &kp GRAVE
+&layer_tap_200 2 TAB  &kp Q               &kp W                     &kp E                       &kp R                  &kp T                                                           &kp Y                  &kp U                  &kp I                       &kp O                      &kp P                   &kp BACKSLASH
+&mo 1                 &kp A               &hold_tap_200 LEFT_ALT S  &hold_tap_200 LEFT_SHIFT D  &hold_tap_200 LCTRL F  &hold_tap_200 LCTRL G                                           &hold_tap_200 RCTRL H  &hold_tap_200 RCTRL J  &hold_tap_200 LEFT_SHIFT K  &hold_tap_200 RIGHT_ALT L  &kp SEMICOLON           &layer_tap_200 1 SQT
+&caps_word            &layer_tap_200 3 Z  &kp X                     &kp C                       &kp V                  &kp B                  &kp ENTER                 &kp RET        &kp N                  &kp M                  &kp COMMA                   &kp DOT                    &layer_tap_200 2 SLASH  &layer_tap_200 3 ENTER
+                                                                    &kp LEFT_WIN                &kp DELETE             &mo 2                  &layer_tap_200 1 SPACE    &kp BACKSPACE  &kp SPACE              &kp N0                 &kp RIGHT_WIN
             >;
         };
 
@@ -198,11 +198,11 @@
 
             display-name = "syms";
             bindings = <
-&trans        &kp F1         &kp F2            &kp F3                &kp F4                 &kp F5                               &kp F6           &kp F7  &kp F8      &kp F9  &kp F10    &kp F11
+&kp TILDE     &kp F1         &kp F2            &kp F3                &kp F4                 &kp F5                               &kp F6           &kp F7  &kp F8      &kp F9  &kp F10    &kp F11
 &trans        &kp DOLLAR     &kp AT_SIGN       &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp AMPERSAND                        &kp PERCENT      &kp N7  &kp N8      &kp N9  &kp STAR   &kp FSLH
 &trans        &kp LESS_THAN  &kp GREATER_THAN  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UNDERSCORE                       &kp POUND        &kp N4  &kp N5      &kp N6  &kp MINUS  &kp DOUBLE_QUOTES
-&kp CAPSLOCK  &none          &kp CARET         &kp LBKT              &kp RBKT               &kp QUESTION    &kp LCTRL    &trans  &kp EXCLAMATION  &kp N1  &kp N2      &kp N3  &kp PLUS   &hold_tap_200 RIGHT_WIN UNDERSCORE
-                                               &kp LEFT_ALT          &kp LEFT_SHIFT         &kp SEMI        &kp F12      &trans  &kp EQUAL        &kp N0  &kp PERIOD
+&kp CAPSLOCK  &kp GRAVE      &kp CARET         &kp LBKT              &kp RBKT               &kp QUESTION    &kp LCTRL    &trans  &kp EXCLAMATION  &kp N1  &kp N2      &kp N3  &kp PLUS   &hold_tap_200 RIGHT_WIN UNDERSCORE
+                                               &kp LEFT_ALT          &kp LEFT_SHIFT         &kp COMMA       &kp F12      &trans  &kp EQUAL        &kp N0  &kp PERIOD
             >;
         };
 
@@ -226,24 +226,24 @@
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
-        Profiles {
-            display-name = "Profiles";
+        Media {
+            display-name = "Media";
             bindings = <
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                              &kp INSERT      &none              &none             &none            &none            &bootloader
-&none       &none         &none         &kp UP        &none         &none                                     &kp KP_NUMLOCK  &kp K_VOLUME_DOWN  &kp K_MUTE        &kp K_VOLUME_UP  &kp PRINTSCREEN  &none
-&none       &none         &kp LEFT      &kp DOWN      &kp RIGHT     &none                                     &none           &kp K_PREVIOUS     &kp K_PLAY_PAUSE  &kp K_NEXT       &none            &trans
-&none       &none         &none         &none         &none         &none         &bootloader    &bootloader  &none           &none              &none             &none            &none            &none
-                                        &trans        &none         &none         &none          &none        &none           &none              &trans
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1       &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                              &kp INSERT      &none  &none              &none             &none            &bootloader
+&none       &none         &none              &kp UP        &none         &none                                     &kp KP_NUMLOCK  &none  &none              &none             &kp PRINTSCREEN  &none
+&none       &none         &kp LEFT           &kp DOWN      &kp RIGHT     &none                                     &none           &none  &kp K_VOLUME_DOWN  &kp K_MUTE        &kp K_VOL_UP     &trans
+&none       &none         &kp K_VOLUME_DOWN  &kp K_MUTE    &kp K_VOL_UP  &none         &bootloader    &bootloader  &none           &none  &kp K_PREV         &kp K_PLAY_PAUSE  &kp K_NEXT       &none
+                                             &kp K_PREV    &kp K_PP      &kp K_NEXT    &none          &none        &none           &none  &trans
             >;
         };
 
         game1 {
             bindings = <
-&kp ESC    &kp N1              &kp N2  &kp N3     &kp N4    &kp N5                                    &kp N6     &kp N7     &kp N8      &kp N9   &kp N0    &kp GRAVE
-&kp TAB    &kp Q               &kp W   &kp E      &kp R     &kp T                                     &kp Y      &kp U      &kp I       &kp O    &kp P     &kp BSLH
-&kp LSHFT  &kp A               &kp S   &kp D      &kp F     &kp G                                     &kp H      &kp J      &kp K       &kp L    &kp SEMI  &kp SQT
-&kp LCTRL  &layer_tap_200 3 Z  &kp X   &kp C      &kp V     &kp B      &kp LEFT_ALT    &kp RET        &kp N      &kp M      &kp COMMA   &kp DOT  &kp FSLH  &mo 1
-                                       &kp LCTRL  &kp LALT  &kp SPACE  &kp LSHFT       &kp BACKSPACE  &kp SPACE  &kp EQUAL  &kp DELETE
+&kp ESC    &kp N1  &kp N2  &kp N3     &kp N4    &kp N5                                    &kp N6     &kp N7     &kp N8      &kp N9   &kp N0    &kp GRAVE
+&kp TAB    &kp Q   &kp W   &kp E      &kp R     &kp T                                     &kp Y      &kp U      &kp I       &kp O    &kp P     &kp BSLH
+&kp LSHFT  &kp A   &kp S   &kp D      &kp F     &kp G                                     &kp H      &kp J      &kp K       &kp L    &kp SEMI  &kp SQT
+&kp LCTRL  &kp Z   &kp X   &kp C      &kp V     &kp B      &kp LEFT_ALT    &kp RET        &kp N      &kp M      &kp COMMA   &kp DOT  &kp FSLH  &mo 1
+                           &kp LCTRL  &kp LALT  &kp SPACE  &kp LSHFT       &kp BACKSPACE  &kp SPACE  &kp EQUAL  &kp DELETE
             >;
 
             label = "game1";
