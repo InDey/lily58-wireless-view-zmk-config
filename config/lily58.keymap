@@ -220,7 +220,7 @@
 &trans          &kp F9            &kp F10         &kp F11      &kp F5      &kp F12                                      &none     &kp LA(LS(COMMA))      &kp UP              &kp LS(LA(PERIOD))  &none             &kp K_SCROLL_DOWN
 &kp LALT        &kp LGUI          &kp LALT        &kp LSHFT    &kp LCTRL   &kp LCTRL                                    &kp HOME  &kp LEFT               &kp DOWN            &kp RIGHT           &kp END           &kp TAB
 &kp LEFT_SHIFT  &none             &kp LC(PERIOD)  &join_lines  &none       &kp LS(F11)                &trans    &trans  &none     &kp LC(RIGHT_BRACKET)  &kp K_BACK          &kp K_FORWARD       &none             &none
-                                                  &trans       &trans      &trans                     &trans    &trans  &trans    &trans                 &trans
+                                                  &trans       &trans      &trans                     &trans    &trans  &trans    &none                  &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
