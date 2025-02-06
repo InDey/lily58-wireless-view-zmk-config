@@ -183,7 +183,7 @@
 &kp ESC               &kp N1  &kp N2                    &kp N3                      &kp N4                 &kp N5                                                          &kp N6                 &kp N7                 &kp N8                      &kp N9                     &kp N0                  &kp GRAVE
 &layer_tap_200 2 TAB  &kp Q   &kp W                     &kp E                       &kp R                  &kp T                                                           &kp Y                  &kp U                  &kp I                       &kp O                      &kp P                   &kp BACKSLASH
 &mo 1                 &kp A   &hold_tap_200 LEFT_ALT S  &hold_tap_200 LEFT_SHIFT D  &hold_tap_200 LCTRL F  &hold_tap_200 LCTRL G                                           &hold_tap_200 RCTRL H  &hold_tap_200 RCTRL J  &hold_tap_200 LEFT_SHIFT K  &hold_tap_200 RIGHT_ALT L  &kp SEMICOLON           &layer_tap_200 3 SQT
-&caps_word            &kp Z   &kp X                     &kp C                       &kp V                  &kp B                  &kp ENTER                 &kp RET        &kp N                  &kp M                  &kp COMMA                   &kp DOT                    &layer_tap_200 2 SLASH  &layer_tap_200 1 ENTER
+&caps_word            &kp Z   &kp X                     &kp C                       &kp V                  &kp B                  &kp ENTER                 &kp RET        &kp N                  &kp M                  &kp COMMA                   &kp DOT                    &layer_tap_200 2 SLASH  &mo 1
                                                         &kp LEFT_WIN                &kp DELETE             &mo 2                  &layer_tap_200 1 SPACE    &kp BACKSPACE  &kp SPACE              &layer_tap_200 2 N0    &kp RIGHT_WIN
             >;
         };
@@ -216,11 +216,11 @@
 
             display-name = "ctrls";
             bindings = <
-&trans          &format_document  &uncomment      &comment     &show_file  &toggle_header_code_files                              &kp INS   &kp KP_NUMLOCK         &previous_bookmark  &toggle_bookmark    &toggle_bookmark  &kp K_SCROLL_UP
-&none           &kp F9            &kp F10         &kp F11      &kp F5      &kp F12                                                &none     &kp LA(LS(COMMA))      &kp UP              &kp LS(LA(PERIOD))  &none             &kp K_SCROLL_DOWN
-&kp LALT        &kp LGUI          &kp LALT        &kp LSHFT    &kp LCTRL   &kp LCTRL                                              &kp HOME  &kp LEFT               &kp DOWN            &kp RIGHT           &kp END           &kp TAB
-&kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp LC(PERIOD)  &join_lines  &none       &kp LS(F11)                &kp ENTER    &kp ENTER      &none     &kp LC(RIGHT_BRACKET)  &kp K_BACK          &kp K_FORWARD       &none             &none
-                                                  &trans       &trans      &trans                     &none        &kp BACKSPACE  &trans    &none                  &trans
+&trans          &format_document  &uncomment      &comment      &show_file  &toggle_header_code_files                              &kp INS    &kp KP_NUMLOCK         &previous_bookmark  &toggle_bookmark    &toggle_bookmark  &kp K_SCROLL_UP
+&none           &kp F9            &kp F10         &kp F11       &kp F5      &kp F12                                                &none      &kp LA(LS(COMMA))      &kp UP              &kp LS(LA(PERIOD))  &none             &kp K_SCROLL_DOWN
+&kp LALT        &kp LGUI          &kp LALT        &kp LSHFT     &kp LCTRL   &kp LCTRL                                              &kp HOME   &kp LEFT               &kp DOWN            &kp RIGHT           &kp END           &kp TAB
+&kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp LC(PERIOD)  &join_lines   &none       &kp LS(F11)                &kp ENTER    &kp ENTER      &none      &kp LC(RIGHT_BRACKET)  &kp K_BACK          &kp K_FORWARD       &none             &none
+                                                  &kp LEFT_WIN  &kp DEL     &none                      &kp SPACE    &kp BACKSPACE  &kp SPACE  &none                  &kp RIGHT_WIN
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -229,11 +229,11 @@
         Media {
             display-name = "Media";
             bindings = <
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1       &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                              &kp INSERT      &none  &none              &none             &none            &bootloader
-&none       &none         &none              &kp UP        &none         &none                                     &kp KP_NUMLOCK  &none  &none              &none             &kp PRINTSCREEN  &none
-&none       &none         &kp LEFT           &kp DOWN      &kp RIGHT     &none                                     &none           &none  &kp K_VOLUME_DOWN  &kp K_MUTE        &kp K_VOL_UP     &trans
-&none       &none         &kp K_VOLUME_DOWN  &kp K_MUTE    &kp K_VOL_UP  &none         &bootloader    &bootloader  &none           &none  &kp K_PREV         &kp K_PLAY_PAUSE  &kp K_NEXT       &none
-                                             &kp K_PREV    &kp K_PP      &kp K_NEXT    &none          &none        &none           &none  &trans
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1       &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                  &kp INSERT      &none  &none              &none             &none         &bootloader
+&none       &none         &none              &kp UP        &none         &none                         &kp KP_NUMLOCK  &none  &kp K_VOLUME_DOWN  &kp K_MUTE        &kp K_VOL_UP  &none
+&none       &none         &kp LEFT           &kp DOWN      &kp RIGHT     &none                         &none           &none  &kp K_PREV         &kp K_PLAY_PAUSE  &kp K_NEXT    &none
+&none       &none         &kp K_VOLUME_DOWN  &kp K_MUTE    &kp K_VOL_UP  &none         &none    &none  &none           &none  &none              &none             &none         &none
+                                             &kp K_PREV    &kp K_PP      &kp K_NEXT    &none    &none  &none           &none  &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOLUME_DOWN>;
