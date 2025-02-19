@@ -206,11 +206,11 @@
 
             display-name = "syms";
             bindings = <
-&kp TILDE     &kp F1         &kp F2            &kp F3                &kp F4                 &kp F5                                      &kp F6           &kp F7  &kp F8      &kp F9  &kp F10    &kp F11
-&trans        &kp DOLLAR     &kp AT_SIGN       &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp AMPERSAND                               &kp PERCENT      &kp N7  &kp N8      &kp N9  &kp STAR   &kp PIPE
-&trans        &kp LESS_THAN  &kp GREATER_THAN  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UNDERSCORE                              &kp POUND        &kp N4  &kp N5      &kp N6  &kp MINUS  &kp DOUBLE_QUOTES
-&kp CAPSLOCK  &kp GRAVE      &kp CARET         &kp LBKT              &kp RBKT               &kp QUESTION    &kp LCTRL    &kp ENTER      &kp EXCLAMATION  &kp N1  &kp N2      &kp N3  &kp PLUS   &kp RIGHT_WIN
-                                               &kp LEFT_ALT          &kp LEFT_SHIFT         &kp COMMA       &kp F12      &kp BACKSPACE  &kp EQUAL        &kp N0  &kp PERIOD
+&kp TILDE     &kp F1         &kp F2            &kp F3                &kp F4                 &kp F5                                          &kp F6           &kp F7  &kp F8      &kp F9  &kp F10    &kp F11
+&trans        &kp DOLLAR     &kp AT_SIGN       &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp AMPERSAND                                   &kp PERCENT      &kp N7  &kp N8      &kp N9  &kp STAR   &kp PIPE
+&trans        &kp LESS_THAN  &kp GREATER_THAN  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UNDERSCORE                                  &kp POUND        &kp N4  &kp N5      &kp N6  &kp MINUS  &kp DOUBLE_QUOTES
+&kp CAPSLOCK  &kp GRAVE      &kp CARET         &kp LBKT              &kp RBKT               &kp QUESTION    &kp SEMICOLON    &kp ENTER      &kp EXCLAMATION  &kp N1  &kp N2      &kp N3  &kp PLUS   &kp RIGHT_WIN
+                                               &kp LEFT_ALT          &kp LEFT_SHIFT         &kp COMMA       &kp F12          &kp BACKSPACE  &kp EQUAL        &kp N0  &kp PERIOD
             >;
         };
 
