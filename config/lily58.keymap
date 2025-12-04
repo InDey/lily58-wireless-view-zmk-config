@@ -279,11 +279,11 @@
         mac_ctrls {
             display-name = "m_ctrls";
             bindings = <
-&trans          &format_document  &uncomment      &comment      &show_file  &toggle_header_code_files                              &kp PAGE_UP         &none                  &none           &msc SCRL_LEFT      &msc SCRL_RIGHT    &msc SCRL_UP
-&none           &kp F9            &kp F11         &kp F10       &kp F5      &kp F12                                                &kp LS(LG(LEFT))    &kp LA(LS(COMMA))      &kp UP          &kp LS(LA(PERIOD))  &kp LS(LG(RIGHT))  &msc SCRL_DOWN
-&kp LALT        &kp LGUI          &kp LALT        &kp LSHFT     &kp LCTRL   &kp LCTRL                                              &kp HOME            &kp LEFT               &kp DOWN        &kp RIGHT           &kp END            &kp TAB
-&kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp LC(PERIOD)  &join_lines   &none       &kp LS(F11)                &kp ENTER    &kp ENTER      &none               &kp LC(RIGHT_BRACKET)  &kp K_BACK      &kp K_FORWARD       &none              &none
-                                                  &kp LEFT_WIN  &kp DEL     &none                      &kp SPACE    &kp BACKSPACE  &previous_bookmark  &toggle_bookmark       &next_bookmark
+&trans          &format_document  &uncomment      &comment          &show_file        &toggle_header_code_files                              &kp PAGE_UP         &none                  &none           &msc SCRL_LEFT      &msc SCRL_RIGHT    &msc SCRL_UP
+&none           &kp F9            &kp F11         &kp F10           &kp F5            &kp F12                                                &kp LS(LG(LEFT))    &kp LA(LS(COMMA))      &kp UP          &kp LS(LA(PERIOD))  &kp LS(LG(RIGHT))  &msc SCRL_DOWN
+&kp LALT        &kp LEFT_CONTROL  &kp LALT        &kp LSHFT         &kp LEFT_COMMAND  &kp LEFT_COMMAND                                       &kp HOME            &kp LEFT               &kp DOWN        &kp RIGHT           &kp END            &kp TAB
+&kp LEFT_SHIFT  &kp LEFT_COMMAND  &kp LC(PERIOD)  &join_lines       &none             &kp LS(F11)                &kp ENTER    &kp ENTER      &none               &kp LC(RIGHT_BRACKET)  &kp K_BACK      &kp K_FORWARD       &none              &none
+                                                  &kp LEFT_CONTROL  &kp DEL           &none                      &kp SPACE    &kp BACKSPACE  &previous_bookmark  &toggle_bookmark       &next_bookmark
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
