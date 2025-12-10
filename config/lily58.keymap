@@ -183,11 +183,11 @@
 
             display-name = "Base";
             bindings = <
-&kp ESC     &kp N1                    &kp N2                    &kp N3                      &kp N4                 &kp N5                                                          &kp N6                 &to 2                   &to 1                       &kp N9                     &kp N0                  &kp GRAVE
-&lt 7 TAB   &kp Q                     &kp W                     &kp E                       &kp R                  &kp T                                                           &kp Y                  &kp U                   &kp I                       &kp O                      &kp P                   &kp BACKSLASH
-&mo 1       &hold_tap_200 LEFT_WIN A  &hold_tap_200 LEFT_ALT S  &hold_tap_200 LEFT_SHIFT D  &hold_tap_200 LCTRL F  &hold_tap_200 LCTRL G                                           &hold_tap_200 RCTRL H  &hold_tap_200 RCTRL J   &hold_tap_200 LEFT_SHIFT K  &hold_tap_200 RIGHT_ALT L  &kp SEMICOLON           &layer_tap_200 7 SQT
-&caps_word  &kp Z                     &kp X                     &kp C                       &kp V                  &kp B                  &kp ENTER                 &kp RET        &kp N                  &kp M                   &kp COMMA                   &kp DOT                    &layer_tap_200 2 SLASH  &mo 1
-                                                                &kp LEFT_SHIFT              &kp DELETE             &mo 2                  &layer_tap_200 1 SPACE    &kp BACKSPACE  &kp SPACE              &layer_tap_200 2 EQUAL  &kp RIGHT_WIN
+&kp ESC     &format_document          &uncomment                &comment                    &show_file             &toggle_header_code_files                                           &kp RG(L)              &format_document        &to 6                       &kp RIGHT_WIN              &kp N0                  &kp GRAVE
+&lt 7 TAB   &kp Q                     &kp W                     &kp E                       &kp R                  &kp T                                                               &kp Y                  &kp U                   &kp I                       &kp O                      &kp P                   &kp BACKSLASH
+&mo 1       &hold_tap_200 LEFT_WIN A  &hold_tap_200 LEFT_ALT S  &hold_tap_200 LEFT_SHIFT D  &hold_tap_200 LCTRL F  &hold_tap_200 LCTRL G                                               &hold_tap_200 RCTRL H  &hold_tap_200 RCTRL J   &hold_tap_200 LEFT_SHIFT K  &hold_tap_200 RIGHT_ALT L  &kp SEMICOLON           &layer_tap_200 7 SQT
+&caps_word  &kp Z                     &kp X                     &kp C                       &kp V                  &kp B                      &kp ENTER                 &kp RET        &kp N                  &kp M                   &kp COMMA                   &kp DOT                    &layer_tap_200 2 SLASH  &mo 1
+                                                                &kp LEFT_SHIFT              &kp DELETE             &mo 2                      &layer_tap_200 1 SPACE    &kp BACKSPACE  &kp SPACE              &layer_tap_200 2 EQUAL  &kp UNDERSCORE
             >;
         };
 
@@ -201,11 +201,11 @@
 
             display-name = "syms";
             bindings = <
-&kp ESCAPE    &none        &none        &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &none                                       &none            &none       &none      &none   &kp KP_DIVIDE    &kp KP_NUMLOCK
+&kp ESCAPE    &none        &none        &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &start_hex                                  &none            &none       &none      &none   &kp KP_DIVIDE    &kp KP_NUMLOCK
 &trans        &kp GRAVE    &kp AT_SIGN  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp AMPERSAND                               &kp PERCENT      &kp N7      &kp N8     &kp N9  &kp KP_ASTERISK  &kp PIPE
 &to 0         &kp HASH     &kp DOLLAR   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UNDERSCORE                              &kp POUND        &kp N4      &kp N5     &kp N6  &kp MINUS        &kp DOUBLE_QUOTES
 &kp CAPSLOCK  &kp PERCENT  &kp CARET    &kp LESS_THAN         &kp GREATER_THAN       &kp QUESTION    &kp SEMICOLON    &kp COMMA  &kp EXCLAMATION  &kp N1      &kp N2     &kp N3  &kp PLUS         &kp RETURN
-                                        &kp TILDE             &trans                 &kp EQUAL       &kp UNDER        &kp SPACE  &kp N0           &kp PERIOD  &kp EQUAL
+                                        &kp TILDE             &kp DEL                &kp EQUAL       &kp UNDER        &kp SPACE  &kp N0           &kp PERIOD  &kp EQUAL
             >;
         };
 
@@ -241,11 +241,11 @@
         mac_syms {
             display-name = "m_sym";
             bindings = <
-&kp ESCAPE    &kp F1         &kp F2       &kp F3                &kp F4                 &kp F5                                         &kp F6           &kp F7      &kp F8     &kp F9  &kp KP_DIVIDE    &kp KP_NUMLOCK
-&trans        &kp GRAVE      &kp AT_SIGN  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp AMPERSAND                                  &kp PERCENT      &kp N7      &kp N8     &kp N9  &kp KP_ASTERISK  &kp PIPE
-&to 0         &kp HASH       &kp DOLLAR   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UNDERSCORE                                 &kp POUND        &kp N4      &kp N5     &kp N6  &kp MINUS        &kp DOUBLE_QUOTES
-&kp CAPSLOCK  &kp SEMICOLON  &kp CARET    &kp LBKT              &kp RBKT               &kp QUESTION      &kp SEMICOLON    &kp COMMA   &kp EXCLAMATION  &kp N1      &kp N2     &kp N3  &kp PLUS         &kp RIGHT_WIN
-                                          &kp TILDE             &kp LESS_THAN          &kp GREATER_THAN  &kp UNDER        &kp DELETE  &kp N0           &kp PERIOD  &kp EQUAL
+&kp ESCAPE    &none        &none        &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &none                                      &none            &none       &none      &none   &none         &kp KP_NUMLOCK
+&trans        &kp GRAVE    &kp AT_SIGN  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp PIPE                                   &kp PERCENT      &kp N7      &kp N8     &kp N9  &kp ASTERISK  &kp SLASH
+&to 0         &kp HASH     &kp DOLLAR   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp AMPERSAND                              &kp COMMA        &kp N4      &kp N5     &kp N6  &kp MINUS     &kp DOUBLE_QUOTES
+&kp CAPSLOCK  &kp PERCENT  &kp CARET    &kp LESS_THAN         &kp RBKT               &kp QUESTION   &kp SEMICOLON    &kp COMMA  &kp EXCLAMATION  &kp N1      &kp N2     &kp N3  &kp PLUS      &kp RIGHT_WIN
+                                        &kp TILDE             &kp DELETE             &kp EQUAL      &kp UNDER        &kp SPACE  &kp N0           &kp PERIOD  &kp EQUAL
             >;
         };
 
