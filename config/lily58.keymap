@@ -158,6 +158,13 @@
             bindings = <&kp EXCL &kp EQUAL>;
             label = "NE";
         };
+
+        Assign: Assign {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SPACE &kp EQUAL &kp SPACE &kp SEMI &kp LEFT_ARROW>;
+            label = "ASSIGN";
+        };
     };
 
     behaviors {
@@ -229,10 +236,10 @@
 
             display-name = "syms";
             bindings = <
-&kp ESCAPE    &LTE         &GTE         &kp LESS_THAN         &kp GREATER_THAN       &start_hex                                 &LTE             &GTE       &NE         &none   &none         &kp KP_NUMLOCK
-&trans        &kp GRAVE    &kp AT_SIGN  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp PIPE                                   &kp GRAVE        &kp N7     &kp N8      &kp N9  &kp ASTERISK  &kp SLASH
-&to 0         &kp HASH     &kp DOLLAR   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp AMPERSAND                              &pointer         &kp N4     &kp N5      &kp N6  &kp MINUS     &kp DOUBLE_QUOTES
-&kp CAPSLOCK  &kp PERCENT  &kp CARET    &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp QUESTION   &kp SEMICOLON    &kp COMMA  &kp EXCLAMATION  &kp N1     &kp N2      &kp N3  &kp PLUS      &kp RETURN
+&kp ESCAPE    &LTE         &GTE         &kp LESS_THAN         &kp GREATER_THAN       &start_hex                                 &LTE             &GTE       &NE         &Assign  &none         &kp KP_NUMLOCK
+&trans        &kp GRAVE    &kp AT_SIGN  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp PIPE                                   &kp GRAVE        &kp N7     &kp N8      &kp N9   &kp ASTERISK  &kp SLASH
+&to 0         &kp HASH     &kp DOLLAR   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp AMPERSAND                              &pointer         &kp N4     &kp N5      &kp N6   &kp MINUS     &kp DOUBLE_QUOTES
+&kp CAPSLOCK  &kp PERCENT  &kp CARET    &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp QUESTION   &kp SEMICOLON    &kp COMMA  &kp EXCLAMATION  &kp N1     &kp N2      &kp N3   &kp PLUS      &kp RETURN
                                         &kp TILDE             &kp DEL                &kp EQUAL      &kp UNDER        &kp SPACE  &kp N0           &kp EQUAL  &kp PERIOD
             >;
         };
