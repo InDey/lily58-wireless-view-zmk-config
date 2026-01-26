@@ -137,6 +137,27 @@
             bindings = <&kp MINUS &kp GT>;
             label = "POINTER";
         };
+
+        GTE: GTE {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp GT &kp EQUAL>;
+            label = "GTE";
+        };
+
+        LTE: LTE {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LT &kp EQUAL>;
+            label = "LTE";
+        };
+
+        NE: NE {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp EXCL &kp EQUAL>;
+            label = "NE";
+        };
     };
 
     behaviors {
@@ -208,7 +229,7 @@
 
             display-name = "syms";
             bindings = <
-&kp ESCAPE    &none        &none        &kp LESS_THAN         &kp GREATER_THAN       &start_hex                                 &none            &none      &none       &none   &none         &kp KP_NUMLOCK
+&kp ESCAPE    &LTE         &GTE         &kp LESS_THAN         &kp GREATER_THAN       &start_hex                                 &LTE             &GTE       &NE         &none   &none         &kp KP_NUMLOCK
 &trans        &kp GRAVE    &kp AT_SIGN  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp PIPE                                   &kp GRAVE        &kp N7     &kp N8      &kp N9  &kp ASTERISK  &kp SLASH
 &to 0         &kp HASH     &kp DOLLAR   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp AMPERSAND                              &pointer         &kp N4     &kp N5      &kp N6  &kp MINUS     &kp DOUBLE_QUOTES
 &kp CAPSLOCK  &kp PERCENT  &kp CARET    &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp QUESTION   &kp SEMICOLON    &kp COMMA  &kp EXCLAMATION  &kp N1     &kp N2      &kp N3  &kp PLUS      &kp RETURN
