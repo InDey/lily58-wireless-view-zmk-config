@@ -254,11 +254,11 @@
 
             display-name = "ctrls";
             bindings = <
-&trans           &kp F1                 &kp F2          &kp F3        &kp F4     &kp F5                                   &kp PAGE_UP         &none                  &none           &msc SCRL_LEFT      &msc SCRL_RIGHT    &msc SCRL_UP
-&none            &kp F9                 &kp F11         &kp F10       &kp F5     &kp F12                                  &kp LS(LG(LEFT))    &kp LA(LS(COMMA))      &kp UP          &kp LS(LA(PERIOD))  &kp LS(LG(RIGHT))  &msc SCRL_DOWN
-&kp LALT         &kp LGUI               &kp LALT        &kp LSHFT     &kp LCTRL  &kp LCTRL                                &kp HOME            &kp LEFT               &kp DOWN        &kp RIGHT           &kp END            &kp TAB
-&kp PRINTSCREEN  &kp LC(RIGHT_BRACKET)  &kp LC(PERIOD)  &join_lines   &none      &kp LS(F11)  &kp ENTER    &kp ENTER      &none               &kp LC(RIGHT_BRACKET)  &kp K_BACK      &kp K_FORWARD       &none              &none
-                                                        &kp LEFT_WIN  &kp DEL    &none        &kp SPACE    &kp BACKSPACE  &previous_bookmark  &toggle_bookmark       &next_bookmark
+&trans           &kp F1                 &kp F2          &kp F3        &kp F4     &kp F5                                   &kp PAGE_UP         &none              &none           &msc SCRL_LEFT      &msc SCRL_RIGHT    &msc SCRL_UP
+&none            &kp F9                 &kp F11         &kp F10       &kp F5     &kp F12                                  &kp LS(LG(LEFT))    &kp LA(LS(COMMA))  &kp UP          &kp LS(LA(PERIOD))  &kp LS(LG(RIGHT))  &msc SCRL_DOWN
+&kp LALT         &kp LGUI               &kp LALT        &kp LSHFT     &kp LCTRL  &kp LCTRL                                &kp HOME            &kp LEFT           &kp DOWN        &kp RIGHT           &kp END            &kp TAB
+&kp PRINTSCREEN  &kp LC(RIGHT_BRACKET)  &kp LC(PERIOD)  &join_lines   &none      &kp LS(F11)  &kp ENTER    &kp ENTER      &none               &kp K_BACK         &none           &kp K_FORWARD       &none              &none
+                                                        &kp LEFT_WIN  &kp DEL    &none        &kp SPACE    &kp BACKSPACE  &previous_bookmark  &toggle_bookmark   &next_bookmark
             >;
         };
 
