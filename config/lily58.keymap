@@ -250,11 +250,11 @@
 
             display-name = "syms";
             bindings = <
-&to 0         &kp F1         &kp F2            &kp F3                &kp F4                 &kp F5                                     &kp F8           &kp F9     &kp F10     &kp F11  &kp F12       &kp KP_NUMLOCK
-&trans        &kp DOLLAR     &kp AT_SIGN       &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp PIPE                                   &kp PERCENT      &kp N7     &kp N8      &kp N9   &kp ASTERISK  &kp SLASH
-&to 0         &kp LESS_THAN  &kp GREATER_THAN  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp AMPERSAND                              &kp HASH         &kp N4     &kp N5      &kp N6   &kp MINUS     &kp DOUBLE_QUOTES
-&kp CAPSLOCK  &kp CARET      &kp TILDE         &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp QUESTION   &kp F6       &kp F7         &kp EXCLAMATION  &kp N1     &kp N2      &kp N3   &kp PLUS      &kp RETURN
-                                               &kp SEMICOLON         &kp BACKSPACE          &kp EQUAL      &kp UNDER    &kp BACKSPACE  &kp N0           &kp EQUAL  &kp PERIOD
+&to 0         &kp F1         &kp F2            &kp F3                &kp F4                 &kp F5                                 &kp F8           &kp F9     &kp F10     &kp F11  &kp F12       &kp KP_NUMLOCK
+&trans        &kp DOLLAR     &kp AT_SIGN       &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp PIPE                               &kp PERCENT      &kp N7     &kp N8      &kp N9   &kp ASTERISK  &kp SLASH
+&to 0         &kp LESS_THAN  &kp GREATER_THAN  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp AMPERSAND                          &kp HASH         &kp N4     &kp N5      &kp N6   &kp MINUS     &kp DOUBLE_QUOTES
+&kp CAPSLOCK  &kp CARET      &kp TILDE         &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp QUESTION   &kp F6       &kp F7     &kp EXCLAMATION  &kp N1     &kp N2      &kp N3   &kp PLUS      &kp RETURN
+                                               &kp SEMICOLON         &kp BACKSPACE          &kp EQUAL      &kp UNDER    &kp SPACE  &kp N0           &kp EQUAL  &kp PERIOD
             >;
         };
 
@@ -268,11 +268,11 @@
 
             display-name = "ctrls";
             bindings = <
-&trans           &none                  &none           &none          &none      &none                                   &previous_bookmark  &toggle_bookmark   &next_bookmark  &msc SCRL_LEFT      &msc SCRL_RIGHT    &msc SCRL_UP
-&none            &kp F9                 &kp F11         &kp F10        &kp F5     &kp F12                                 &kp LS(LG(LEFT))    &kp LA(LS(COMMA))  &kp UP          &kp LS(LA(PERIOD))  &kp LS(LG(RIGHT))  &msc SCRL_DOWN
-&kp LALT         &kp LGUI               &kp LALT        &kp LSHFT      &kp LCTRL  &kp LCTRL                               &kp HOME            &kp LEFT           &kp DOWN        &kp RIGHT           &kp END            &kp TAB
-&kp PRINTSCREEN  &kp LC(RIGHT_BRACKET)  &kp LC(PERIOD)  &join_lines    &none      &kp LS(F11)     &kp ENTER    &kp ENTER  &none               &none              &mkp MB4        &mkp MB5            &none              &none
-                                                        &kp BACKSPACE  &kp DEL    &kp LEFT_SHIFT  &kp SPACE    &kp SPACE  &previous_bookmark  &toggle_bookmark   &next_bookmark
+&trans           &none                  &none           &none          &none      &none                                       &previous_bookmark  &toggle_bookmark   &next_bookmark  &msc SCRL_LEFT      &msc SCRL_RIGHT    &msc SCRL_UP
+&none            &kp F9                 &kp F11         &kp F10        &kp F5     &kp F12                                     &kp LS(LG(LEFT))    &kp LA(LS(COMMA))  &kp UP          &kp LS(LA(PERIOD))  &kp LS(LG(RIGHT))  &msc SCRL_DOWN
+&kp LALT         &kp LGUI               &kp LALT        &kp LSHFT      &kp LCTRL  &kp LCTRL                                   &kp HOME            &kp LEFT           &kp DOWN        &kp RIGHT           &kp END            &kp TAB
+&kp PRINTSCREEN  &kp LC(RIGHT_BRACKET)  &kp LC(PERIOD)  &join_lines    &none      &kp LS(F11)     &kp ENTER    &kp ENTER      &none               &none              &mkp MB4        &mkp MB5            &none              &none
+                                                        &kp BACKSPACE  &kp DEL    &kp LEFT_SHIFT  &kp SPACE    &kp BACKSPACE  &previous_bookmark  &toggle_bookmark   &next_bookmark
             >;
         };
 
